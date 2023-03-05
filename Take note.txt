@@ -1,0 +1,2 @@
+1. Autowired final class repository sang serviceImpl không thể ghi đè --> tạo phương thức để sử dụng repository. 
+2. Phiên bản Sql server cũ quá cũng lỗi.
