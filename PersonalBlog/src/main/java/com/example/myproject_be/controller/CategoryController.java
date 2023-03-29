@@ -47,10 +47,10 @@ public class CategoryController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Void> addCategory(@RequestBody String name) {
-        System.out.println(name);
+    public ResponseEntity<Void> addCategory(@RequestBody Category category) {
+        System.out.println(category.getCategoryName());
         try {
-            categoryService.addCategory(name);
+            categoryService.addCategory(category.getCategoryName());
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
             System.out.println(e.getMessage());

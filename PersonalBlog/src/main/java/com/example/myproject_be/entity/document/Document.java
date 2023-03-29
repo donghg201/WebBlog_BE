@@ -22,16 +22,23 @@ public class Document {
     @Column(name = "document_id")
     private Integer documentId;
 
-    @Column(name = "document_name", columnDefinition = "varchar(255)")
+    @Column(name = "document_name", columnDefinition = "varchar(200)")
     @NotNull
     private String documentName;
 
-    @Column(name = "document_writer", columnDefinition = "varchar(50)")
+    @Column(name = "document_writer", columnDefinition = "varchar(40)")
     private String documentWriter;
 
     @NotNull
     @Column(name = "description", columnDefinition = "TEXT")
     private String description;
+
+    @NotNull
+    @Column(name = "document_poster", columnDefinition = "varchar(255)")
+    private String documentPoster;
+
+    @Column(name = "document_date", columnDefinition = "date")
+    private String documentDate;
 
     @Column(name = "`delete_flag`", columnDefinition = "bit(1)")
     private Boolean deleteFlag;
